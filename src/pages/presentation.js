@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import violoncelle from "../images/femme-violoncelle.jpg"
+import fleur from "../images/fleur1920.jpg"
 import logo from "../images/logo.png"
 import Navbar from '../components/navbar';
 import { Link } from 'react-scroll'
 
 const PresentationPage = () => (
   <Layout>
-    <section className="hero is-primary is-fullheight" style={{ backgroundImage: 'url(' + violoncelle + ')', backgroundSize: "cover" }}>
+    <section className="hero is-primary is-fullheight" style={{ backgroundImage: 'url(' + fleur + ')', backgroundSize: "cover" }}>
       <div className="hero-head">
         <header className="navbar has-text-grey-darker" style={{ backgroundColor: '#ffffffbf' }}>
           <div className="container">
