@@ -8,9 +8,7 @@
 
 @import './button.scss';
 
-// K = Blade Runner Movie Font
-// G = Bahnschrift SemiBold
-// NAAR = Bernard MT Condensed
+@import './components/_footer.scss';
 
 .gradientBg {
 	display: flex;
@@ -46,4 +44,19 @@
 .link-button:hover,
 .link-button:focus {
 text-decoration: none;
+}
+
+.hero.is-fullheight:first-of-type{
+	height:91vh !important;
+	min-height: 91vh !important;
+}
+
+.full-width-image {
+  width: 100vw;
+  height: 400px;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

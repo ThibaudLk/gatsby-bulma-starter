@@ -16,11 +16,11 @@ class Layout extends Component {
 	}
 	render() {
 		return (
-			<div>
+			<>
 				<Navbar isActive={this.state.isActive} toggleNavbar={() => this.toggleNavbar()} />
 					{this.props.children}
 				<Footer />
-			</div>
+			</>
 		)
 	}
 }
