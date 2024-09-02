@@ -8,7 +8,7 @@ import { Link } from 'react-scroll'
 const IndexPage = () => (
    <Layout>
     <SEO title="index" />
-    <section className="hero is-fullheight" style={{ backgroundImage: 'url(' + fleur + ')', backgroundSize: "cover" }}>
+    <section className="hero is-fullheight-with-navbar" style={{ backgroundImage: 'url(' + fleur + ')', backgroundSize: "cover" }}>
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title is-1">Mon nom</h1>
@@ -21,7 +21,7 @@ const IndexPage = () => (
          </span>
       </div>
     </section>
-    <section id="suite" className="hero is-fullheight">
+    <section id="suite" className="hero is-fullheight has-background-primary">
       YOYO
     </section>
   </Layout>
