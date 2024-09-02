@@ -1,18 +1,13 @@
 @import './mixins.scss';
+
 // Importing variables
-// https://bulma.io/documentation/customize/variables/
 @import './variables.scss';
-
-// Importing Bulma from node_modules
-@import '~bulma/bulma.scss';
-
-@import './button.scss';
-
-@import './components/_footer.scss';
+// https://bulma.io/documentation/customize/variables/
+@import "../../custom_bulma.css";
 
 .gradientBg {
 	display: flex;
-	background: linear-gradient(to right, $primary-color, $secondary-color);
+	background: linear-gradient(to right, $primary, $info);
 }
 
 .center {
@@ -25,38 +20,128 @@
 	display: flex;
 	padding: 1.5rem 1.5rem;
 	line-height: 1.5rem;
+
 	a {
 		border-bottom: 1px solid;
 		color: black;
 	}
+
 	a:hover {
-		color: $secondary-color;
+		color: $info;
 	}
 }
 
 /* faire ressembler les boutons à des liens */
 .link-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 
 .link-button:hover,
 .link-button:focus {
-text-decoration: none;
+	text-decoration: none;
 }
 
-.hero.is-fullheight:first-of-type{
-	height:91vh !important;
+.hero.is-fullheight:first-of-type {
+	height: 91vh !important;
 	min-height: 91vh !important;
 }
 
 .full-width-image {
-  width: 100vw;
-  height: 400px;
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 100vw;
+	height: 400px;
+	background-size: cover;
+	background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Footer
+#footer {
+	width: 100%;
+	max-width: 100%;
+	margin-top: 2rem;
+	text-align: center;
+
+	.copyright {
+		letter-spacing: _font(letter-spacing);
+		/* font-size: 0.6rem; */
+		opacity: 0.75;
+		margin-bottom: 0;
+		text-transform: uppercase;
+
+		a {
+			font-weight: bold;
+		}
+	}
+
+	.body.is-loading & {
+		opacity: 0;
+	}
+}
+
+//button
+.cta-btn {
+	display: inline-block;
+	position: relative;
+	padding: 0.8rem;
+	font-weight: bold;
+	line-height: 1;
+	z-index: 1;
+	transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 0px;
+		height: 100%;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+	}
+}
+
+/* Hero Style */
+.cta-btn--hero {
+	background-color: $white;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	border-width: 2px;
+	border-style: solid;
+	border-image-slice: 1;
+	cursor: pointer;
+
+	// Responsive Button hero style
+	@include respond(phone) {
+		background-image: none;
+		border: 2px solid $info;
+		-webkit-text-fill-color: $info;
+	}
+
+	&::after {
+		background-image: linear-gradient(135deg, $primary 0%, $info 100%);
+
+		// Responsive Button hero style
+		@include respond(phone) {
+			background-image: none;
+		}
+	}
+
+	&:hover {
+		-webkit-text-fill-color: $white;
+		text-decoration: none;
+
+		// Responsive Button hover hero style
+		@include respond(phone) {
+			-webkit-text-fill-color: $info;
+		}
+
+		&::after {
+			width: 100%;
+		}
+	}
 }

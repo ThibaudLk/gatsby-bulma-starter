@@ -1,0 +1,15 @@
+// VARIABLES
+$white: #faf3e9;
+$orange: #f59f4a;
+$bleu: #275a74;
+$primary: #f59f4a;
+$info: #275a74;
+
+
+// Path to Bulma's sass folder
+@use "bulma/sass" with (
+    $white: $white,
+    $primary: $orange,
+    $info: $bleu,
+    $body-color: $bleu
+);
