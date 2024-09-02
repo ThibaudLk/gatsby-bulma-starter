@@ -3,9 +3,6 @@
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
-  <a href="https://bulma.io/">
-    <img alt="Bulma" src="https://image.pngaaa.com/787/6130787-middle.png" width="60" />
-  </a>
 </p>
 <h1 align="center">
   A simple starter using Gatsby and Bulma
